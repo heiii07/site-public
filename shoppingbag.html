@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Shopping Bag</title>
+<link href="CSS/style.css" rel="stylesheet" type="text/css">
+<script>
+        function increment() {
+            var counterInput = document.getElementById("counter-value");
+            counterValue.value = parseInt(counterValue.value) + 1;
+        }
+
+        function decrement() {
+            var counterInput = document.getElementById("counter-value");
+            var newValue = parseInt(counterValue.value) - 1;
+            counterValue.value = newValue < 1 ? 1 : newValue;
+        }
+    </script>
+<body>
+    <div class="bagpage-container">
+        <div class="shopping-bag">
+            <h2>Review your bag.</h2>
+                <div class="bag-container">
+                    <div class="bag-info">
+                        <div class="item-amount">
+                            <div class="item-amount-container">
+                                <div class="item-quantity">
+                                        <button class="counter-buttonl" onclick="decrement()">-</button>
+                                        <input type="number" min="0" name="quantity" class="counter-value">
+                                        <button class="counter-buttonr" onclick="increment()">+</button>
+                                </div>
+                                
+                                <span class="dollar">$</span>
+                                <span class="value">90</span>
+                            </div>
+                        </div>
+                        <div class="bag-detail">
+                            <div class="bag-image">
+                                <img src="#">
+                            </div>
+                            <div class="bag-detail-text">
+                                <div class="detail">
+                                    <div class="name">
+                                        Order Date
+                                    </div>
+                                    <div class="value">
+                                        12-09-2004
+                                    </div>
+                                </div>
+                                <div class="detail">
+                                    <div class="name">
+                                        Item Name
+                                    </div>
+                                    <div class="value">
+                                        Pen
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                   </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
